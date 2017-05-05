@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
-        id="com.xmartlabs.cordova.market" version="1.2.0">
+        id="cordova-plugin-market" version="1.2.1">
     <name>Market</name>
-    <description>Cordova Plugin for access to Google Play and Apple Store within your app</description>
+    <description>Cordova Plugin for access to Google Play, Apple Store and Windows Store within your app</description>
     <license>Apache 2.0</license>
     <keywords>cordova,market,store,itunes,play</keywords>
     <js-module src="www/market.js" name="Market">
@@ -27,4 +27,11 @@
         <header-file src="src/ios/CDVMarket.h" />
         <source-file src="src/ios/CDVMarket.m" />
     </platform>
+
+    <platform name="windows">
+        <js-module src="src/windows/marketProxy.js"  name="marketProxy">
+            <merges target="" />
+        </js-module>
+    </platform>
+
 </plugin>
