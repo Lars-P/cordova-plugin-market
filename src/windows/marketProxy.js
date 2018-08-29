@@ -3,7 +3,7 @@ module.exports = {
     open: function( successCallback, errorCallback, pfn ) {
         try {
             window.open("ms-windows-store://pdp/?PFN=" + pfn, "_system");
-            successCallback( r );
+            successCallback();
         }
         catch ( ex ) {
             errorCallback( ex );
